@@ -7,26 +7,26 @@ function generarTabla() {
      * @type {number}
      * El número ingresado por el usuario.
      */
-    var numero = parseInt(document.getElementById("numero").value);
+    let numero = parseInt(document.getElementById("numero").value);
 
     /**
      * @type {number}
      * El límite ingresado por el usuario.
      */
-    var limite = parseInt(document.getElementById("limite").value);
+    let limite = parseInt(document.getElementById("limite").value);
 
     /**
      * @type {string}
      * El HTML de la tabla generada.
      */
-    var tablaHTML = "<h3>Tabla de Multiplicar del " + numero + "</h3><table border='1'><tr><th>Multiplicando</th><th>Producto</th></tr>";
+    let tablaHTML = "<h3>Tabla de Multiplicar del " + numero + "</h3><table border='1'><tr><th>Multiplicando</th><th>Producto</th></tr>";
 
-    for (var i = 1; i <= limite; i++) {
+    for (let i = 1; i <= limite; i++) {
         /**
          * @type {number}
          * El producto de la multiplicación.
          */
-        var producto = numero * i;
+        let producto = numero * i;
         tablaHTML += "<tr><td>" + numero + " x " + i + "</td><td>" + producto + "</td></tr>";
     }
 
@@ -42,7 +42,7 @@ function esPrimo() {
      * @type {number}
      * El número ingresado por el usuario.
      */
-    var numero = parseInt(document.getElementById("numeroPrimo").value);
+    let numero = parseInt(document.getElementById("numeroPrimo").value);
 
     /**
      * @type {boolean}
@@ -55,7 +55,7 @@ function esPrimo() {
     } else if (numero <= 1 || numero % 2 === 0) {
         esPrimo = false;
     } else {
-        for (var i = 3; i <= Math.sqrt(numero); i += 2) {
+        for (let i = 3; i <= Math.sqrt(numero); i += 2) {
             if (numero % i === 0) {
                 esPrimo = false;
                 break;
@@ -74,15 +74,15 @@ function calcularFactorial() {
      * @type {number}
      * El número ingresado por el usuario.
      */
-    var numero = parseInt(document.getElementById("numeroFactorial").value);
+    let numero = parseInt(document.getElementById("numeroFactorial").value);
 
     /**
      * @type {number}
      * El factorial del número.
      */
-    var factorial = 1;
+    let factorial = 1;
 
-    for (var i = 2; i <= numero; i++) {
+    for (let i = 2; i <= numero; i++) {
         factorial *= i;
     }
 
